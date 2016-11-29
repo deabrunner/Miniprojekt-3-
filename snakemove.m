@@ -5,7 +5,7 @@ clf;
 xs=min(min(xsnake))-0.1;
 xe=max(max(xsnake))+0.1;
 ys=min(min(ysnake))-0.1;
-ye=max(max(ysnake))+0.1;
+ye=max(max(ysnake))+0.1; %hej
 clear MV;
 for ti=1:noT
     hold off;
