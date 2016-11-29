@@ -16,3 +16,5 @@ for ti=1:noT
     MV(ti)=getframe;
 end;
 movie(MV);
+
+hej
