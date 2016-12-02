@@ -5,6 +5,7 @@ g=exp(s.^2);
 se=(0:100)/100;
 ge=interp1(s,g,se,'spline');
 gexakt=exp(se.^2);
+func(s)=@exp(s.^2)
 
 subplot(2,1,1)
 plot(s,g,'o')
