@@ -38,13 +38,10 @@ loglog(punkt,fel,'.-')
 % 
 % - I en tabell, presentera felet för varje N och ange också kvoten för 
 % felet för succesiva N värden (dvs e20/e40, e40/e80, osv).
-% - Hur beror felet av N? (Dvs bestäm heltalet p i uttrycket eN ? C/Np).
-for i=e
-kvot=fel/i
+
+for i=2:length(fel)
+kvot(i)=fel(i-1)/fel(i)
 end
-disp fel
-disp kvot
+Tabell=[N2' fel' kvot']
 
-
-
-
+% - Hur beror felet av N? (Dvs bestäm heltalet p i uttrycket eN ? C/Np).
