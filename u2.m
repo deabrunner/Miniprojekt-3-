@@ -3,12 +3,12 @@ load snakecoord
 s = 1:6;
 se = linspace(1,6,100)
 
-noT = [20:10:500];
+noT = [40 80 120 160];
 
-xs=min(min(xsnake))-0.1;
-xe=max(max(xsnake))+0.1;
-ys=min(min(ysnake))-0.1;
-ye=max(max(ysnake))+0.1;
+xs=0
+xe=1
+ys=-0.2
+ye=1
 
 for ti=1:noT
     hold off;
