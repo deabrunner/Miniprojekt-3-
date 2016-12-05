@@ -8,11 +8,11 @@ A=5;
 k=3;
 t=0;
 
+
 thv_ana = (A/(k*pi))*((sin(k*pi*s + 2*pi*t)) - sin(2*pi*t));
 kappav=A*cos(k*pi*s+2*pi*t);
 thv_numM=ds*cumtrapz(kappav);
 thv_num=zeros(size(s));
-
 
 for i=1:N
     thv_num(i+1)=thv_num(i)+(ds/2)*((kappav(i)+kappav(i+1)));
@@ -33,4 +33,5 @@ plot(s,thv_numM)
 
 fel1 = sqrt(sum(diff1.^2)/numel(diff1))
 fel2 = sqrt(sum(diff2.^2)/numel(diff2))
+
 
