@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 %U3b
 clear all
 close all
@@ -30,3 +31,5 @@ diff=thv_ana-thv_num
 
 plot(svektor, diff)
 hold on;
+=======
+>>>>>>> Stashed changes
