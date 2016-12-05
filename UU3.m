@@ -12,8 +12,13 @@ thv_ana = (A/(k*pi))*((sin(k*pi*svektor + 2*pi*t)) - sin(2*pi*t))
 ds=1/N;
 thv_num=stegl*cumtrapz(svektor)
 kappav=A*cos(k*pi*svektor+2*pi*t)
+<<<<<<< Updated upstream
 thv_num0=zeros(size(svektor));
 thv_numM=ds*cumtrapz(kappav)
+=======
+thv_num=zeros(size(svektor));
+thv_numM=stegl*cumtrapz(svektor)
+>>>>>>> Stashed changes
 
 for i=1:N
     

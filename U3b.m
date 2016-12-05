@@ -3,17 +3,16 @@ clear all
 close all
 
 N =[50, 100, 200, 400]
-
+for i=N;
+    
+end
 
 A=5; 
 k=3;
 t=0;
 
-
-
 svektor=(0:N)/N
 stegl=1/N
-
 
 thv_ana = (A/(k*pi))*((sin(k*pi*svektor + 2*pi*t)) - sin(2*pi*t))
 thv_num=stegl*cumtrapz(svektor)

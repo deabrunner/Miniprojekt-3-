@@ -39,22 +39,7 @@ kvot(i)=fel(i-1)/fel(i);
 end
 format long
 Tabell=[punkt' fel' kvot']
+table(Tabell)
 
-% - Hur beror felet av N? (Dvs bestäm heltalet p i uttrycket eN ? C/Np).
-% h=fel./punkt
-% y=punkt./fel
-
-% fel
-% felkvot = [];
-% for i=1:length(fel)
-%     while i < (length(fel)-1)
-%         felkvot(i) = fel(i)/fel(i+1);
-%     end
-% end
-% felkvot
-
-
-
-% Uppgift 2
 
 
