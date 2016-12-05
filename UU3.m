@@ -7,7 +7,6 @@ s=(0:N)*ds;
 A=5; 
 k=3;
 t=0;
-<<<<<<< HEAD
 
 thv_ana = (A/(k*pi))*((sin(k*pi*s + 2*pi*t)) - sin(2*pi*t));
 kappav=A*cos(k*pi*s+2*pi*t);
