@@ -1,13 +1,20 @@
+%U3b
 clear all
 close all
 
-N=100
-svektor=(0:N)/N;
+N =[50, 100, 200, 400]
+
+
 A=5; 
 k=3;
 t=0;
-stegl=1/100
+
+
+
 svektor=(0:N)/N
+stegl=1/N
+
+
 thv_ana = (A/(k*pi))*((sin(k*pi*svektor + 2*pi*t)) - sin(2*pi*t))
 thv_num=stegl*cumtrapz(svektor)
 kappav=A*cos(k*pi*svektor+2*pi*t)
@@ -23,6 +30,3 @@ diff=thv_ana-thv_num
 
 plot(svektor, diff)
 hold on;
-
-
-
