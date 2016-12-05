@@ -2,9 +2,9 @@ load snakecoord
 clear all
 close all
 s = 1:6;
-se = linspace(1,6,100)
+se = linspace(0,1,100)
 
-noT = [40 80 120 160];
+% noT = [40 80 120 160];
 
 xs=0
 xe=1
@@ -25,6 +25,4 @@ for ti=1:noT
     axis('off');
     MV(ti)=getframe;
 end
-
-
 

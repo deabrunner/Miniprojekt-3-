@@ -1,3 +1,4 @@
+clear all
 load snakecoord
 
 s = 1:6;
