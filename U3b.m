@@ -1,7 +1,7 @@
 clear all
 close all
 
-N=40;
+N=100;
 ds=1/N;
 s=(0:N)*ds;
 A=5; 
