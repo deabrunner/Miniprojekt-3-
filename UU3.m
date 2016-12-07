@@ -19,17 +19,15 @@ for i=1:N
 end
     diff1=thv_ana-thv_num;
     diff2=thv_numM-thv_num;
-    subplot(4,1,1)
+    subplot(3,1,1)
     plot(s, diff1)
     hold on;
-    subplot(4,1,2)
+    subplot(3,1,2)
     plot(s,thv_num)
     hold on;
     
-subplot(4,1,3)
+subplot(3,1,3)
 plot(s,thv_ana)
-subplot(4,1,4)
-plot(s,thv_numM)
 
 fel1 = sqrt(sum(diff1.^2)/numel(diff1))
 fel2 = sqrt(sum(diff2.^2)/numel(diff2))
