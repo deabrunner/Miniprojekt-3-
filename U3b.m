@@ -4,34 +4,38 @@ close all
 N=100;
 ds=1/N;
 s=(0:N)*ds;
+
 A=5; 
 k=3;
 t=0;
 
+Fel = [];
 
-thv_ana = (A/(k*pi))*((sin(k*pi*s + 2*pi*t)) - sin(2*pi*t));
-kappav=A*cos(k*pi*s+2*pi*t);
-thv_numM=ds*cumtrapz(kappav);
-thv_num=zeros(size(s));
-
-for i=1:N
-    thv_num(i+1)=thv_num(i)+(ds/2)*((kappav(i)+kappav(i+1)));
-end
-    diff1=thv_ana-thv_num;
-    diff2=thv_numM-thv_num;
-    subplot(4,1,1)
-    plot(s, diff1)
-    hold on;
-    subplot(4,1,2)
-    plot(s,thv_num)
-    hold on;
+N=[50 100 200 400];
+for i=1:4
     
-subplot(4,1,3)
-plot(s,thv_ana)
-subplot(4,1,4)
-plot(s,thv_numM)
+    ds=1/N(i);
+    s=(0:N(i))*ds;
 
-fel1 = sqrt(sum(diff1.^2)/numel(diff1))
-fel2 = sqrt(sum(diff2.^2)/numel(diff2))
+    thv_ana = (A/(k*pi))*((sin(k*pi*s + 2*pi*t)) - sin(2*pi*t));
+    kappav=A*cos(k*pi*s+2*pi*t);
+    thv_numM=ds*cumtrapz(kappav);
+    thv_num=zeros(size(s));
 
+    for j=1:N(i)
+        thv_num(j+1)=thv_num(j)+(ds/2)*((kappav(j)+kappav(j+1)));
+    end
+    Fel(i)=rms((thv_ana-thv_num));
+    
+end
+loglog(N,Fel)
+figure
+plot(N,Fel)
+Fel
 
+hast1=Fel(2)/Fel(1)
+hast2=Fel(3)/Fel(2)
+hast3=Fel(4)/Fel(3)
+konvhast=(hast1+hast2+hast3)/3
+ 
+abs(log(konvhast)/log(2))
