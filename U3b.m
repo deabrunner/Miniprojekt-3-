@@ -32,6 +32,6 @@ Fel
 hast1=Fel(2)/Fel(1)
 hast2=Fel(3)/Fel(2)
 hast3=Fel(4)/Fel(3)
-konvhast=(hast1+hast2+hast3)/3
+hast=(hast1+hast2+hast3)/3
  
-abs(log(konvhast)/log(2))
+konvhast=abs(log(hast)/log(2))
