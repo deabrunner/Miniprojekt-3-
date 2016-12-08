@@ -33,5 +33,4 @@ plot(xres,yres)
 
 axis([-0.05 1.0 0.05 0.15]);
 axis('image')
-format short
-ormlangd=sum(sqrt(diff(xres).^2+diff(yres).^2))
+
